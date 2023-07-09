@@ -1,0 +1,17 @@
+extends base.pug
+
+block content
+  nav
+    ul
+      li
+        a(href="/") Home
+  form(method="POST")
+    input(name="title", placeholder="Title", type="text", requried)
+    input(name="description", placeholder="Description", type="text", requried)
+    input(
+      name="hashtags",
+      placeholder="Hashtags, separated by comma.",
+      type="text",
+      requried
+    )
+    input(type="submit", value="Upload Video")

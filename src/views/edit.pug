@@ -1,0 +1,26 @@
+extends base.pug
+
+block content
+  nav
+    a(href="/") Home
+  h4 Change Title of Video
+  form(method="POST")
+    input(
+      name="title",
+      placeholder="New Video Title",
+      value=video.title,
+      required
+    )
+    input(
+      name="description",
+      placeholder="Description",
+      value=video.description,
+      requried
+    )
+    input(
+      name="hashtags",
+      placeholder="Hashtags, separated by comma.",
+      value=video.hashtags.join(),
+      requried
+    )
+    input(value="save", type="submit")
